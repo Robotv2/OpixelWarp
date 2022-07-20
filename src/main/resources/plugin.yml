@@ -1,0 +1,4 @@
+name: OpixelWarp
+version: '${version}'
+main: fr.robotv2.opixelwarp.OpixelWarpFix
+authors: [ Robotv2 ]

@@ -31,7 +31,6 @@ repositories {
 dependencies {
     implementation 'org.jetbrains:annotations:23.0.0'
     implementation "co.aikar:acf-paper:0.5.1-SNAPSHOT"
-    implementation "net.raidstone:WorldGuardEvents:1.18.1"
     compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
 }
 
@@ -69,7 +68,6 @@ processResources {
 shadowJar {
     relocate 'co.aikar.commands', 'fr.robotv2.opixelwarp.acf'
     relocate 'co.aikar.locales', 'fr.robotv2.opixelwarp.locales'
-    relocate 'net.raidstone.wgevents', 'fr.robotv2.opixelwarp.wgevents'
 }
 
 apply plugin: 'java'

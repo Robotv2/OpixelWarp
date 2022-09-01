@@ -10,7 +10,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.lang.reflect.Method;
 import java.util.stream.Collectors;
 
 public final class OpixelWarpFix extends JavaPlugin {
@@ -25,14 +24,6 @@ public final class OpixelWarpFix extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-
-        try {
-            final Method method = WorldGuardEvents.class.getMethod("onEnable");
-            method.invoke()
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        }
-
         this.loadWarps();
         this.loadCommands();
     }

@@ -65,7 +65,9 @@ public class WarpBaseCommand extends BaseCommand {
         }
 
         final Set<Integer> init = new HashSet<>();
-        init.add(1); init.add(2); init.add(3); init.add(4); init.add(5); init.add(6); init.add(7);
+        for(int i = 0; i <= 7; i++) {
+            init.add(i);
+        }
 
         final Warp warp = new Warp(name, player.getLocation(), init, permission);
         warp.save();

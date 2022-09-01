@@ -4,7 +4,6 @@ import co.aikar.commands.PaperCommandManager;
 import fr.robotv2.opixelwarp.api.Warp;
 import fr.robotv2.opixelwarp.command.WarpBaseCommand;
 import fr.robotv2.opixelwarp.util.FileUtil;
-import net.raidstone.wgevents.WorldGuardEvents;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,7 +14,6 @@ import java.util.stream.Collectors;
 public final class OpixelWarpFix extends JavaPlugin {
 
     private static OpixelWarpFix instance;
-    private WorldGuardEvents wg;
 
     public static OpixelWarpFix get() {
         return instance;
@@ -30,7 +28,6 @@ public final class OpixelWarpFix extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        wg.onDisable();
         instance = null;
     }
 
